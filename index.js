@@ -3,7 +3,7 @@ const App = express()
 
 App.get("/" , (req , res )=>{
     res.status(200)
-    .send("<html><head></head><body><h1>Hello Guys!👋</h1></body></html>")
+    .send("<html><head><style>body{box-sizing:border-box;heigt:100vh;width:100vw;display:flex;justify-content:center;align-items:center;text-align:center;font-size:45px}</style></head><body><h1>Hello Guys!👋</h1></body></html>")
 })
 
 App.get("/players" , (req , res ) =>
@@ -11,6 +11,7 @@ App.get("/players" , (req , res ) =>
     res.status(200)
     .json([
         {
+          
             "id": 2,
             "sport_id": 1,
             "country_id": 41,
@@ -23,7 +24,7 @@ App.get("/players" , (req , res ) =>
             "last_played_at": "2024-04-17 19:00:00",
             "category": 1,
             "has_jerseys": false
-          },
+    },
           {
             "id": 5,
             "sport_id": 1,
@@ -234,7 +235,7 @@ App.get("/players/peoples" , (req , res )=>{
 
 App.use((req , res ) => {
     res.status(404)
-    .send("<html><head></head><body><h1>404 Not Found❌</h1?</body></html>")
+    .send("<html><head><style>body{box-sizing:border-box;heigt:100vh;width:100vw;display:flex;justify-content:center;align-items:center;text-align:center;font-size:45px}</style></head><body><h1>404 Not Found❌</h1></body></html>")
 })
 
 App.listen("3000" , ()=>{
